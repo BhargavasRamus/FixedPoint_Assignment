@@ -15,10 +15,10 @@ int main(void){
   int A[16];
   int B[10];
   for(int i=0;i<16;i++){
-    A[i]=(round)(a[i]*pow(2,13));
+    A[i]=(int)(a[i]*pow(2,13));
   }
   for(int j=0;j<10;j++){
-    B[j]=(round)(b[j]*pow(2,13));
+    B[j]=(int)(b[j]*pow(2,13));
   }
   
   int C[25];
@@ -35,7 +35,7 @@ int main(void){
     }
   }
   for(int i=0;i<25;i++){
-    c[i]=(double)(C[i]/pow(2,13));
-    printf(c[i]);
+    c[i]=(double)(C[i]/pow(2,26));
+    printf("C[%d]=%lf\n",i,c[i]);
   }
 }
