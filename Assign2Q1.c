@@ -12,7 +12,28 @@ int main(void){
    0.963365491184473, 0.0611683879836982, -0.126424722362053 ,1.08772832230303,
   -0.743741290000000, 1.08772832230147};
   
-  A=(round)(a*pow(2,13));
-  B=(round)(b*pow(2,13));
-  printf(A)
-  printf(B)
+  int A[16];
+  int B[10];
+  for(int i=0;i<16;i++){
+    A[i]=(round)(a[i]*pow(2,13));
+  }
+  for(int j=0;j<10;j++){
+    B[j]=(round)(b[j]*pow(2,13));
+  }
+  
+  int C[25];
+  double c[25];
+  for (int k=0;k<25;k++) {
+    C[k] = 0;
+    c[k] = 0;
+  }
+  
+  for(int i=0;i<25;i++){
+    for(int j=0;j<16;j++){
+      if(i-j>=0 && i-j<==10)
+      C[i]+=A[j]*B[i-j];
+    }
+  }
+  c=(double)(C/pow(2,13));
+  printf("convolution of a and b is %lf",c);
+}
