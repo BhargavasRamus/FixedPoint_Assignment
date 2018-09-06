@@ -30,10 +30,12 @@ int main(void){
   
   for(int i=0;i<25;i++){
     for(int j=0;j<16;j++){
-      if(i-j>=0 && i-j<==10)
+      if(i-j>=0 && i-j<=10)
       C[i]+=A[j]*B[i-j];
     }
   }
-  c=(double)(C/pow(2,13));
-  printf("convolution of a and b is %lf",c);
+  for(int i=0;i<25;i++){
+    c[i]=(double)(C[i]/pow(2,13));
+    printf(c[i]);
+  }
 }
