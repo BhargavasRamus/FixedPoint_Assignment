@@ -31,7 +31,7 @@ int main(void){
     }
   }
   for(int i=0;i<10;i++){
-    c[i]=(double)(C[i]/(double)pow(2,28));
+    c[i]=(double)(C[i]/pow(2,28));
     printf("C[%d]=%lf\n",i,c[i]);
   }
 }
